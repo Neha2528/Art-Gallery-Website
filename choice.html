@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ChoicePaint</title>
+<style>
+	*{
+	margin: 0;
+	padding: 0;
+	font-family: verdana;
+}
+
+#main{
+	width: 100%;
+	height: 100vh;
+	background-image: url(paint.jpg);
+	background-size: cover;
+}
+input[type=integer] {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 12px 5px;
+		background: rgba(0,0,0,0.10);
+		outline: none;
+		border: none;
+		border-bottom: 1px dotted #fff;
+		color: #000;
+		border-radius: 5px;
+		margin: 5px;
+		font-weight: bold;
+	}
+	input[type=submit]{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 10px 0;
+		margin-top: 30px;
+		outline: none;
+		border:none;
+		background: #60adde;
+		opacity: 0.7;
+		border-radius: 20px;
+		font-size: 20px;
+		color: #fff;
+	}
+	input[type=submit]:hover{
+		background: #003366;
+		opacity: 0.7;
+	}
+.title{
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+}
+.title h1{
+	
+	font-family: Georgia;
+	color: lightpink;
+}
+.wrap{
+			max-width: 500px;
+			border-radius: 50px;
+			margin: auto;
+			background: rgba(216,191,216,0.8);
+			box-sizing: border-box;
+			padding: 40px;
+			color:#000;
+			margin-top: 100px;
+			position: absolute;
+			top: 40%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+
+h2{
+			font-family: Times New Roman;
+			text-align: center;
+		}
+</style>
+</head>
+<body>
+	<div id="main">
+	<div class="title">
+		<h1>Your Choice</h1>
+	</div>
+	<div class=" wrap ">
+			<form action="choice.php" method="POST">
+			<center>
+				<p>Your Registration for our Art Exhibition will be confirm for this particular painting with your vote...</p>
+				<p>So, You are been invited for the event which will be organises within an Exhibition to rate your choosen Painting.</p>
+				<p>All Transaction related to painting will be held at the event in our Art Gallery location(For location visit our About Page).</p>
+				<p>Prior informed consent will be provided to all through given Contact or Email-Id.</p><br>
+				<p>Any Upadate in <a href="updtcontact.html">Contact or Email</a>...</p>
+			</center><br><br>
+			<input type="integer" name="pid" placeholder="Painting-Id" required>
+			<input type="submit" name="submit" value="Submit"><br><br>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Setting</title>
+<style>
+	*{
+	margin: 0;
+	padding: 0;
+	font-family: verdana;
+}
+
+#main{
+	width: 100%;
+	height: 100vh;
+	background-image: url(qur.jpg);
+	background-size: cover;
+}
+
+nav{
+	width: 100%;
+	height: 87px;
+	background-color: #0009;
+	opacity: 0.9;
+	line-height: 88px;
+}
+
+nav ul{
+	float: right;
+	list-style-type: none;
+	margin-right: 30px;
+} 
+ 
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	transition: 0.8s all;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 30px;
+	
+}
+
+nav ul li:hover{
+	background-color: #f39d1a;
+	
+}
+
+ ul li.active a{
+ 		background-color: #f39d1a;
+}
+input[type=text] , input[type=password], input[type=email]{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 12px 5px;
+		background: rgba(0,0,0,0.10);
+		outline: none;
+		border: none;
+		border-bottom: 1px dotted #fff;
+		color: #000;
+		border-radius: 5px;
+		margin: 5px;
+		font-weight: bold;
+	}
+	input[type=submit]{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 10px 0;
+		margin-top: 30px;
+		outline: none;
+		border:none;
+		background: #60adde;
+		opacity: 0.7;
+		border-radius: 20px;
+		font-size: 20px;
+		color: #fff;
+	}
+	input[type=submit]:hover{
+		background: #003366;
+		opacity: 0.7;
+	}
+.title{
+	position: absolute;
+	top: 18%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+}
+.title h1{
+	
+	font-family: Georgia;
+	color: lightpink;
+}
+
+.button{
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+}
+.btn{
+	border: 1px solid #fff;
+	padding: 10px 30px;
+	color: black;
+	text-decoration: none;
+
+}
+.wrap{
+			max-width: 500px;
+			border-radius: 50px;
+			margin: auto;
+			background: rgba(245, 245, 245,0.8);
+			box-sizing: border-box;
+			padding: 40px;
+			color:#000;
+			margin-top: 100px;
+		}
+.btn:hover{
+	background-color: #f39d1a;
+	transition: 0.6s ease;
+}
+h2{
+			font-family: Times New Roman;
+			text-align: center;
+		}
+</style>
+</head>
+<body>
+	<header>
+	<div id="main">
+		<nav>
+		<img src="icon.jpg" width="86" height="86">
+			<ul>
+				<li><a href="Homepage.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="Paint.php">Artcart</a></li>
+				<li class="active"><a href="setting.html">Settings</a></li>
+				<li><a href="logout.php">Logout</a></li>
+			</ul>
+		</nav>
+	<div class="title">
+		<h1>...Setting...</h1>
+	</div>
+	<div class=" wrap ">
+			<h2>Delete Account</h2><br><br>
+			<form action="del.php" method="POST">
+			<input type="email" name="eml" placeholder="Email-ID" required>
+			<input type="password" name="pwd" placeholder="New-Password" id="myPassword" size="30" required>
+			<img src="eycon.jpg" align="right"  onmouseover="mouseoverPass();" onmouseout="mouseoutPass();" /><br><br>
+			<input type="checkbox" name="agree"  required>Sure about Deleting Account...
+			<input type="submit" name="submit" value="Submit"><br><br>
+			</form>
+		</div>
+	</div>
+</header>
+<script> 
+        function mouseoverPass(obj) {
+  var obj = document.getElementById('myPassword');
+  obj.type = "text";
+}
+function mouseoutPass(obj) {
+  var obj = document.getElementById('myPassword');
+  obj.type = "password";
+} 
+</script> 
+</body>
+</html>
